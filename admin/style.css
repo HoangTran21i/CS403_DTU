@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+header {
+    height: 70px;
+    width: 100vw;
+    border-bottom: 2px solid #dddd;
+    align-items: center;
+    display: flex;
+    padding: 12px 50px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+header.sticky {
+    background: rgba(255, 255, 255, 1);
+}
+header:hover {
+    background: rgba(255, 255, 255, 1);
+}
+.logo {
+    flex: 1;
+}
+.logo img {
+    height: 50px;
+    border-radius: 50%;
+}
+.menu {
+    flex: 3;
+    display: flex;
+}
+.menu h1 {
+    padding-left: 60px;
+    font-size: 30px;
+}
+.others {
+    /* flex: 1; */
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.others > li {
+    padding: 0 12px;
+    position: relative;
+    display: flex;
+}
+.others > li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50%;
+    background-color: #000000;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.others > li:last-child::after {
+    display: none;
+}
+.others > li:first-child {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.admin-content {
+    padding-top: 80px;
+    display: flex;
+}
+.admin-content-left {
+    background-color: #dddddd;
+    width: 20%;
+    height: 100vh;
+    padding: 30px 0 0 12px;
+    border-radius: 5px;
+}
+.admin-content-left > ul > li > a {
+    font-weight: bold;
+    
+}
+.admin-content-left ul li {
+    margin: 6px 0;
+}
+.admin-content-left ul ul {
+    margin-left: 20px;
+}
+.admin-content-right {
+    width: 80%;
+    padding: 30px 0 0 12px;   
+}
+.admin-content-right-category_add input {
+    height: 30px;
+    width: 200px;
+    padding-left: 12px;
+}
+.admin-content-right-category_add button {
+    display: block;
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    background-color: brown;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+.admin-content-right-category_add button:hover {
+    background-color: transparent;
+    border: 1px solid brown;
+    color: brown;
+}
+/*---------------------Category_list------ */
+.admin-content-right-category_list table {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px 0px;
+}
+.admin-content-right-category_list table tr th,td {
+    border: 1px solid #dddddd;
+}
+table {
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+/*-------------Product-----------------*/
+.admin-content-right-product_add h1 {
+    margin-bottom: 20px;
+}
+.admin-content-right-product_add input,select {
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin: 6px 0 12px;
+    padding-left: 12px;
+}
+.admin-content-right-product_add textarea {
+    display: block;
+    height: 200px;
+    width: 500px;
+    margin: 12px;
+    padding: 12px;
+}
+.admin-content-right-product_add button {
+    display: block;
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    background-color: brown;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+.admin-content-right-product_add button:hover {
+    background-color: transparent;
+    border: 1px solid brown;
+    color: brown;
+}
+
+
+.admin-content-right-news_add h1 {
+    margin-bottom: 20px;
+}
+.admin-content-right-news_add input {
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin: 6px 0 12px;
+    padding-left: 12px;
+}
+.admin-content-right-news_add textarea {
+    display: block;
+    height: 200px;
+    width: 500px;
+    margin: 12px;
+    padding: 12px;
+}
+.admin-content-right-news_add button {
+    display: block;
+    margin-top: 10px;
+    height: 30px;
+    width: 120px;
+    cursor: pointer;
+    background-color: brown;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+.admin-content-right-news_add button:hover {
+    background-color: transparent;
+    border: 1px solid brown;
+    color: brown;
+}
+
+.truncate-text {
+    max-width: 300px; /* Độ rộng tối đa của ô nội dung */
+    max-height: 4.5em; /* Giới hạn chiều cao (3 dòng) */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Nếu chỉ muốn 1 dòng */
+    word-wrap: break-word; /* Cho phép xuống dòng nếu cần */
+}
